@@ -115,7 +115,7 @@ char buffer[RTP_DEBUG_STRING_LEN];
 void _rtp_debug_syslog_printf(int dbg_lvl, char *fmt, ...)
 {
 char buffer[RTP_DEBUG_STRING_LEN];
- va_list argptr=0;
+ va_list argptr;
  va_start(argptr,fmt);
  vsprintf(buffer, fmt, argptr);
  va_end(argptr);
