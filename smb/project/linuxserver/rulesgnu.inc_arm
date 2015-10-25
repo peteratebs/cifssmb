@@ -1,0 +1,72 @@
+#include $(targ).inc
+
+ARCH=arm-elf-
+
+CC=$(ARCH)gcc
+AR=$(ARCH)ar
+CXX=$(ARCH)g++
+
+#cflags  +=
+ccflags +=
+ldflags += -lpthread
+
+includes += /sdk/armtools/toolchain/lib/gcc-lib/arm-elf/2.95.3/include
+includes += /sdk/armtools/toolchain/include
+
+ifeq ($(compiler),GNUCOMPILER)
+%.$(lib):
+	echo ARCHIVING $@
+#	ar ru $@ $(notdir $^)
+	$(AR) ru $@ $(notdir $^)
+
+%.$(obj): %.c
+	echo COMPILING $<
+#	gcc -g	$(cflags) $(defines:%=-D%) $(includes:%=-I%) -c $<	-o $(notdir $@)
+	$(CC) -g $(cflags) $(defines:%=-D%) $(includes:%=-I%) -c $<	-o $(notdir $@)
+
+#%.$(obj): %.cxxa
+#	echo COMPILING $<
+#	$(toolprefix)gcc $(ccflags)	$(defines:%=-D%) $(includes:%=-I%) -c $< -o $(notdir $@)
+
+%.$(obj): %.cpp
+	echo xxx %.cpp COMPILING $<
+	$(toolprefix)gcc $(ccflags)	$(defines:%=-D%) $(includes:%=-I%) -c $< -o $(notdir $@)
+
+%.$(exe):
+	echo LINKING $@
+	$(CXX) $(ldflags) -o $(notdir $@)	$^ -lm -lc -lgcc
+
+endif #	GNUCOMPILER
+
+#### Generic Stuff
+
+# Make dependency files
+%.d: %.c
+	echo UPDATING DEPENDENCIES FOR $<
+	gcc	-undef -M $< $(defines:%=-D%) $(builtins:%=-D%)	$(includes:%=-I%) |	depend $(obj) >	$@
+
+.INTERMEDIATE: $(modules:%=%.d)
+$(targ).inc: $(modules:%=%.d)
+	echo MAKING	$@
+	cat	*.d	> $@
+
+.PHONY:	CLEAN
+CLEAN:
+	echo CLEANING
+	rm -f	*.o
+	rm -f	*.a
+	rm -f   *.out
+
+.PHONY:	clean
+clean:
+	echo CLEANING
+	rm -f	*.o
+	rm -f	*.a
+	rm -f   *.out
+
+
+.PHONY:	dep
+dep:
+	echo DEPENDENCIES UPDATED
+
+

@@ -1,0 +1,48 @@
+
+
+
+Command         Request Type            Request Category            Request
+
+Rename          Trans2					Query Path Info             Query File Basic Info
+				Trans2					Find_First2     patter\\filename
+				Trans2					Query Path Info             Query File Basic Info path :\\filename
+				Trans2					Query FS Info    			Query FS Attribute Info
+				Trans2					Find_First2
+				Trans2					Query FS Info    			Query FS Attribute Info
+
+				Create ANDx   path = \\filename
+
+				Trans2					Query File Info             Query File Basic Info
+
+				CLOSE REQUEST 	FID
+
+				RENAME REQUEST oldname ... newname
+				RENAME RESPONSE
+
+				Trans2					Find_First2
+				Trans2					Find_First2
+				Trans2					Find_First2
+				Trans2					Find_First2
+				Session Setup ANDx
+				Tree Disconnect
+
+____________________________________________________________________________________________
+
+Command         Request Type            Request Category            Request
+
+DELETE          Trans2					Query Path Info             Query File Basic Info
+				Trans2					Find_First2
+				Trans2					Find_First2
+
+				Create ANDx
+
+				SET FILE INFO ------------------------------>>>>>>>>>> NOT SUPPORTED
+
+
+				Close
+
+				Trans2					Query Path Info             Query File Basic Info
+
+
+
+				

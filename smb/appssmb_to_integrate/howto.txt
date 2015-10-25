@@ -1,0 +1,11 @@
+This directory contains simple regression test for SMB client and server.
+It is meant to run RTSMB against RTSMB but you could modify Server Name
+etc. to run agains any SMB.
+
+This directory contains the following files:
+   smbtst.c   - contains main program; calls client or server test
+   smbtst.h   - configuration information
+   clitst.c   - client regression test
+   clishell.c - client interactive shell
+   srvtst.c   - server program; spawns server and hangs; shell or regression
+                test can be run against server

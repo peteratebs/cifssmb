@@ -1,0 +1,32 @@
+
+* Commands not supported:
+These because we don't support byte range locking:
+LOCK_BYTE_RANGE
+UNLOCK_BYTE_RANGE
+WRITE_AND_UNLOCK
+LOCK_AND_READ
+
+These because we don't do connection-less transports (that is, we use TCP/IP):
+READ_MPX
+WRITE_MPX
+READ_MPX_SECONDARY
+TRANSACTION_SECONDARY
+TRANSACTION2_SECONDARY
+NT_TRANSACT_SECONDARY
+
+The following command isn't supported both because it is optional and because our printing is simplistic enough not to need it:
+SMB_COM_GET_PRINT_QUEUE
+
+These because they imply a lot of functionality that just doesn't exist outside of NT, like NT security, QOS, and extended file attributes:
+NT_TRANSACT_CREATE
+
+
+* Features not supported:
+Extended file attributes (not all file systems support it)
+Large files (64-bit offsets -- mostly there.  just a little glue code for file systems)
+Opportunistic locks (oplocks -- its an efficiency thing)
+Byte range locking (locking pieces of files so that other clients/processes don't use them)
+Sharing mode (locking whole files so that other clients/processes don't use them)
+Extended security (using security blobs and such)
+Remote authorization using a primary domain controller (some code for this is in there, but it isn't complete)
+Multihomed brower service

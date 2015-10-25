@@ -1,0 +1,1115 @@
+Archive member included because of file (symbol)
+
+bin/rtsmbclientlib.a(climain.o)
+                              bin/rtsmbclientapplication.o (smbclientmain)
+bin/rtsmbclientlib.a(clishell.o)
+                              bin/rtsmbclientlib.a(climain.o) (smb_cli_shell)
+bin/rtsmbclientlib.a(cliapi.o)
+                              bin/rtsmbclientlib.a(clishell.o) (rtsmb_cli_init)
+bin/rtsmbclientlib.a(clicfg.o)
+                              bin/rtsmbclientlib.a(clishell.o) (prtsmb_cli_ctx)
+bin/rtsmbclientlib.a(cliez.o)
+                              bin/rtsmbclientlib.a(cliapi.o) (rtsmb_cli_ez_set_user_rt)
+bin/rtsmbclientlib.a(clissn.o)
+                              bin/rtsmbclientlib.a(cliapi.o) (rtsmb_cli_session_close_session)
+bin/rtsmbclientlib.a(cliwire.o)
+                              bin/rtsmbclientlib.a(clissn.o) (rtsmb_cli_wire_get_buffer)
+bin/rtsmbclientlib.a(psmbnet.o)
+                              bin/rtsmbclientlib.a(clissn.o) (rtsmb_netport_select_n_for_read)
+bin/rtsmbclientlib.a(smbbrcfg.o)
+                              bin/rtsmbclientlib.a(clissn.o) (prtsmb_browse_ctx)
+bin/rtsmbclientlib.a(smbdebug.o)
+                              bin/rtsmbclientlib.a(cliez.o) (_rtsmb_debug_output_str)
+bin/rtsmbclientlib.a(smbglue.o)
+                              bin/rtsmbclientlib.a(clissn.o) (rtsmb_glue_get_server_name_from_cache)
+bin/rtsmbclientlib.a(smbnbds.o)
+                              bin/rtsmbclientlib.a(cliapi.o) (rtsmb_nbds_init)
+bin/rtsmbclientlib.a(smbnbns.o)
+                              bin/rtsmbclientlib.a(clissn.o) (rtsmb_nbns_fill_name_query)
+bin/rtsmbclientlib.a(smbnbss.o)
+                              bin/rtsmbclientlib.a(cliwire.o) (rtsmb_nbss_fill_request)
+bin/rtsmbclientlib.a(smbnet.o)
+                              bin/rtsmbclientlib.a(smbnbds.o) (rtsmb_nbds_port)
+bin/rtsmbclientlib.a(smbpack.o)
+                              bin/rtsmbclientlib.a(smbnbns.o) (rtsmb_pack_add)
+bin/rtsmbclientlib.a(smbread.o)
+                              bin/rtsmbclientlib.a(smbnbns.o) (rtsmb_read)
+bin/rtsmbclientlib.a(smbutil.o)
+                              bin/rtsmbclientlib.a(clissn.o) (rtsmb_util_unicode_to_ascii)
+bin/rtsmbclientlib.a(rtpchar.o)
+                              bin/rtsmbclientlib.a(clishell.o) (rtp_isdigit)
+bin/rtsmbclientlib.a(rtpscnv.o)
+                              bin/rtsmbclientlib.a(clishell.o) (rtp_itoa)
+bin/rtsmbclientlib.a(rtpstr.o)
+                              bin/rtsmbclientlib.a(clishell.o) (rtp_stricmp)
+bin/rtsmbclientlib.a(rtpwcs.o)
+                              bin/rtsmbclientlib.a(cliez.o) (rtp_wcslen)
+bin/rtsmbclientlib.a(rtpdebug.o)
+                              bin/rtsmbclientlib.a(clishell.o) (_rtp_debug_syslog_printf)
+bin/rtsmbclientlib.a(rtpdate.o)
+                              bin/rtsmbclientlib.a(smbutil.o) (rtp_get_date)
+bin/rtsmbclientlib.a(rtpnet.o)
+                              bin/rtsmbclientlib.a(cliwire.o) (rtp_net_socket_stream)
+bin/rtsmbclientlib.a(rtpsignl.o)
+                              bin/rtsmbclientlib.a(clicfg.o) (_rtp_sig_mutex_alloc)
+bin/rtsmbclientlib.a(rtpterm.o)
+                              bin/rtsmbclientlib.a(clishell.o) (rtp_term_gets)
+bin/rtsmbclientlib.a(rtpthrd.o)
+                              bin/rtsmbclientlib.a(cliez.o) (rtp_thread_handle)
+bin/rtsmbclientlib.a(rtptime.o)
+                              bin/rtsmbclientlib.a(cliez.o) (rtp_get_system_msec)
+bin/rtsmbclientlib.a(clians.o)
+                              bin/rtsmbclientlib.a(clissn.o) (cli_cmd_read_header)
+bin/rtsmbclientlib.a(clicmds.o)
+                              bin/rtsmbclientlib.a(cliwire.o) (cli_cmd_fill_header)
+bin/rtsmbclientlib.a(ecb_enc.o)
+                              bin/rtsmbclientlib.a(smbutil.o) (rtsmb_des_ecb_encrypt)
+bin/rtsmbclientlib.a(hmac_md5.o)
+                              bin/rtsmbclientlib.a(smbutil.o) (hmac_md5)
+bin/rtsmbclientlib.a(md4_one.o)
+                              bin/rtsmbclientlib.a(smbutil.o) (RTSMB_MD4)
+bin/rtsmbclientlib.a(md5rsa.o)
+                              bin/rtsmbclientlib.a(hmac_md5.o) (MD5Init)
+bin/rtsmbclientlib.a(set_key.o)
+                              bin/rtsmbclientlib.a(smbutil.o) (rtsmb_des_set_odd_parity)
+bin/rtsmbclientlib.a(smbbrbuf.o)
+                              bin/rtsmbclientlib.a(smbnbds.o) (rtsmb_nbds_read_header)
+bin/rtsmbclientlib.a(smbnb.o)
+                              bin/rtsmbclientlib.a(smbnbns.o) (rtsmb_nb_fill_name)
+bin/rtsmbclientlib.a(smbsjis.o)
+                              bin/rtsmbclientlib.a(smbutil.o) (rtsmb_jis_to_unicode)
+bin/rtsmbclientlib.a(rtpwchar.o)
+                              bin/rtsmbclientlib.a(rtpwcs.o) (rtp_iswdigit)
+bin/rtsmbclientlib.a(des_enc.o)
+                              bin/rtsmbclientlib.a(ecb_enc.o) (rtsmb_des_encrypt)
+bin/rtsmbclientlib.a(md4_dgst.o)
+                              bin/rtsmbclientlib.a(md4_one.o) (RTSMB_MD4_Update)
+/usr/lib/i386-linux-gnu/libc_nonshared.a(elf-init.oS)
+                              /usr/lib/gcc/i686-linux-gnu/4.6/../../../i386-linux-gnu/crt1.o (__libc_csu_init)
+
+Allocating common symbols
+Common symbol       size              file
+
+shell_buffer        0x800             bin/rtsmbclientlib.a(clishell.o)
+gl_domain_name      0x80              bin/rtsmbclientlib.a(clishell.o)
+gl_password         0x80              bin/rtsmbclientlib.a(clishell.o)
+gl_share_name       0x80              bin/rtsmbclientlib.a(clishell.o)
+gl_user_name        0x80              bin/rtsmbclientlib.a(clishell.o)
+cnv_msg             0x64              bin/rtsmbclientlib.a(smbdebug.o)
+domain_name_is_set  0x4               bin/rtsmbclientlib.a(clishell.o)
+password_name_is_set
+                    0x4               bin/rtsmbclientlib.a(clishell.o)
+prtsmb_browse_ctx   0x4               bin/rtsmbclientlib.a(smbbrcfg.o)
+share_name_is_set   0x4               bin/rtsmbclientlib.a(clishell.o)
+user_name_is_set    0x4               bin/rtsmbclientlib.a(clishell.o)
+
+Discarded input sections
+
+ .note.GNU-stack
+                0x00000000        0x0 /usr/lib/gcc/i686-linux-gnu/4.6/../../../i386-linux-gnu/crt1.o
+ .gnu_debuglink
+                0x00000000        0xc /usr/lib/gcc/i686-linux-gnu/4.6/../../../i386-linux-gnu/crt1.o
+ .note.GNU-stack
+                0x00000000        0x0 /usr/lib/gcc/i686-linux-gnu/4.6/../../../i386-linux-gnu/crti.o
+ .gnu_debuglink
+                0x00000000        0xc /usr/lib/gcc/i686-linux-gnu/4.6/../../../i386-linux-gnu/crti.o
+ .note.GNU-stack
+                0x00000000        0x0 /usr/lib/gcc/i686-linux-gnu/4.6/crtbegin.o
+ .note.GNU-stack
+                0x00000000        0x0 bin/rtsmbclientapplication.o
+ .note.GNU-stack
+                0x00000000        0x0 bin/rtsmbclientlib.a(climain.o)
+ .note.GNU-stack
+                0x00000000        0x0 bin/rtsmbclientlib.a(clishell.o)
+ .note.GNU-stack
+                0x00000000        0x0 bin/rtsmbclientlib.a(cliapi.o)
+ .note.GNU-stack
+                0x00000000        0x0 bin/rtsmbclientlib.a(clicfg.o)
+ .note.GNU-stack
+                0x00000000        0x0 bin/rtsmbclientlib.a(cliez.o)
+ .note.GNU-stack
+                0x00000000        0x0 bin/rtsmbclientlib.a(clissn.o)
+ .note.GNU-stack
+                0x00000000        0x0 bin/rtsmbclientlib.a(cliwire.o)
+ .note.GNU-stack
+                0x00000000        0x0 bin/rtsmbclientlib.a(psmbnet.o)
+ .note.GNU-stack
+                0x00000000        0x0 bin/rtsmbclientlib.a(smbbrcfg.o)
+ .note.GNU-stack
+                0x00000000        0x0 bin/rtsmbclientlib.a(smbdebug.o)
+ .note.GNU-stack
+                0x00000000        0x0 bin/rtsmbclientlib.a(smbglue.o)
+ .note.GNU-stack
+                0x00000000        0x0 bin/rtsmbclientlib.a(smbnbds.o)
+ .note.GNU-stack
+                0x00000000        0x0 bin/rtsmbclientlib.a(smbnbns.o)
+ .note.GNU-stack
+                0x00000000        0x0 bin/rtsmbclientlib.a(smbnbss.o)
+ .note.GNU-stack
+                0x00000000        0x0 bin/rtsmbclientlib.a(smbnet.o)
+ .note.GNU-stack
+                0x00000000        0x0 bin/rtsmbclientlib.a(smbpack.o)
+ .note.GNU-stack
+                0x00000000        0x0 bin/rtsmbclientlib.a(smbread.o)
+ .note.GNU-stack
+                0x00000000        0x0 bin/rtsmbclientlib.a(smbutil.o)
+ .note.GNU-stack
+                0x00000000        0x0 bin/rtsmbclientlib.a(rtpchar.o)
+ .note.GNU-stack
+                0x00000000        0x0 bin/rtsmbclientlib.a(rtpscnv.o)
+ .note.GNU-stack
+                0x00000000        0x0 bin/rtsmbclientlib.a(rtpstr.o)
+ .note.GNU-stack
+                0x00000000        0x0 bin/rtsmbclientlib.a(rtpwcs.o)
+ .note.GNU-stack
+                0x00000000        0x0 bin/rtsmbclientlib.a(rtpdebug.o)
+ .note.GNU-stack
+                0x00000000        0x0 bin/rtsmbclientlib.a(rtpdate.o)
+ .note.GNU-stack
+                0x00000000        0x0 bin/rtsmbclientlib.a(rtpnet.o)
+ .note.GNU-stack
+                0x00000000        0x0 bin/rtsmbclientlib.a(rtpsignl.o)
+ .note.GNU-stack
+                0x00000000        0x0 bin/rtsmbclientlib.a(rtpterm.o)
+ .note.GNU-stack
+                0x00000000        0x0 bin/rtsmbclientlib.a(rtpthrd.o)
+ .note.GNU-stack
+                0x00000000        0x0 bin/rtsmbclientlib.a(rtptime.o)
+ .note.GNU-stack
+                0x00000000        0x0 bin/rtsmbclientlib.a(clians.o)
+ .note.GNU-stack
+                0x00000000        0x0 bin/rtsmbclientlib.a(clicmds.o)
+ .note.GNU-stack
+                0x00000000        0x0 bin/rtsmbclientlib.a(ecb_enc.o)
+ .note.GNU-stack
+                0x00000000        0x0 bin/rtsmbclientlib.a(hmac_md5.o)
+ .note.GNU-stack
+                0x00000000        0x0 bin/rtsmbclientlib.a(md4_one.o)
+ .note.GNU-stack
+                0x00000000        0x0 bin/rtsmbclientlib.a(md5rsa.o)
+ .note.GNU-stack
+                0x00000000        0x0 bin/rtsmbclientlib.a(set_key.o)
+ .note.GNU-stack
+                0x00000000        0x0 bin/rtsmbclientlib.a(smbbrbuf.o)
+ .note.GNU-stack
+                0x00000000        0x0 bin/rtsmbclientlib.a(smbnb.o)
+ .note.GNU-stack
+                0x00000000        0x0 bin/rtsmbclientlib.a(smbsjis.o)
+ .note.GNU-stack
+                0x00000000        0x0 bin/rtsmbclientlib.a(rtpwchar.o)
+ .note.GNU-stack
+                0x00000000        0x0 bin/rtsmbclientlib.a(des_enc.o)
+ .note.GNU-stack
+                0x00000000        0x0 bin/rtsmbclientlib.a(md4_dgst.o)
+ .group         0x00000000        0x8 /usr/lib/i386-linux-gnu/libc_nonshared.a(elf-init.oS)
+ .note.GNU-stack
+                0x00000000        0x0 /usr/lib/i386-linux-gnu/libc_nonshared.a(elf-init.oS)
+ .note.GNU-stack
+                0x00000000        0x0 /usr/lib/gcc/i686-linux-gnu/4.6/crtend.o
+ .note.GNU-stack
+                0x00000000        0x0 /usr/lib/gcc/i686-linux-gnu/4.6/../../../i386-linux-gnu/crtn.o
+ .gnu_debuglink
+                0x00000000        0xc /usr/lib/gcc/i686-linux-gnu/4.6/../../../i386-linux-gnu/crtn.o
+
+Memory map
+
+ ** file header
+                0x08048000       0x34
+ ** segment headers
+                0x08048034      0x120
+
+.interp         0x08048154       0x13
+ ** fill        0x08048154       0x13
+
+.note.ABI-tag   0x08048168       0x20
+ .note.ABI-tag  0x08048168       0x20 /usr/lib/gcc/i686-linux-gnu/4.6/../../../i386-linux-gnu/crt1.o
+
+.note.gnu.build-id
+                0x08048188       0x24
+ ** note header
+                0x08048188       0x10
+ ** zero fill   0x08048198       0x14
+
+.dynsym         0x080481ac      0x500
+ ** dynsym      0x080481ac      0x500
+
+.dynstr         0x080486ac      0x417
+ ** string table
+                0x080486ac      0x417
+
+.gnu.hash       0x08048ac4       0x3c
+ ** hash        0x08048ac4       0x3c
+
+.gnu.version    0x08048b00       0xa0
+ ** versions    0x08048b00       0xa0
+
+.gnu.version_r  0x08048ba0       0x90
+ ** version refs
+                0x08048ba0       0x90
+
+.rel.dyn        0x08048c30       0x28
+ ** dynamic relocs
+                0x08048c30       0x28
+
+.rel.plt        0x08048c58      0x240
+ ** dynamic relocs
+                0x08048c58      0x240
+
+.init           0x08048e98       0x2e
+ .init          0x08048e98       0x1f /usr/lib/gcc/i686-linux-gnu/4.6/../../../i386-linux-gnu/crti.o
+                0x08048e98                _init
+ .init          0x08048eb7        0x5 /usr/lib/gcc/i686-linux-gnu/4.6/crtbegin.o
+ .init          0x08048ebc        0x5 /usr/lib/gcc/i686-linux-gnu/4.6/crtend.o
+ .init          0x08048ec1        0x5 /usr/lib/gcc/i686-linux-gnu/4.6/../../../i386-linux-gnu/crtn.o
+
+.plt            0x08048ed0      0x490
+ ** PLT         0x08048ed0      0x490
+
+.text           0x08049360    0x3212c
+ .text          0x08049360       0x24 /usr/lib/gcc/i686-linux-gnu/4.6/../../../i386-linux-gnu/crt1.o
+                0x08049360                _start
+ .text          0x08049384        0x0 /usr/lib/gcc/i686-linux-gnu/4.6/../../../i386-linux-gnu/crti.o
+ ** fill        0x08049384        0xc
+ .text          0x08049390       0x83 /usr/lib/gcc/i686-linux-gnu/4.6/crtbegin.o
+ ** fill        0x08049413        0x1
+ .text          0x08049414       0x1d bin/rtsmbclientapplication.o
+                0x08049414                main
+ ** fill        0x08049431        0x3
+ .text          0x08049434        0xd bin/rtsmbclientlib.a(climain.o)
+                0x08049434                smbclientmain
+ ** fill        0x08049441        0x3
+ .text          0x08049444     0x43d1 bin/rtsmbclientlib.a(clishell.o)
+                0x08049444                smb_cli_term_printf
+                0x0804952a                smb_cli_term_get_command
+                0x08049874                smb_cli_shell
+                0x0804ad51                mark_rv
+                0x0804ad83                wait_on_job
+                0x0804c969                looks_like_ip_addr
+ ** fill        0x0804d815        0x3
+ .text          0x0804d818      0xdef bin/rtsmbclientlib.a(cliapi.o)
+                0x0804d818                rtsmb_cli_init
+                0x0804d84c                rtsmb_cli_shutdown
+                0x0804d89d                rtsmb_cli_session_logon_user
+                0x0804d964                rtsmb_cli_session_open
+                0x0804d9eb                rtsmb_cli_session_rename
+                0x0804dab2                rtsmb_cli_session_delete
+                0x0804db24                rtsmb_cli_session_mkdir
+                0x0804db96                rtsmb_cli_session_rmdir
+                0x0804dc08                rtsmb_cli_session_find_first
+                0x0804dc81                rtsmb_cli_session_stat
+                0x0804dcfa                rtsmb_cli_session_chmode
+                0x0804dd73                rtsmb_cli_ez_set_user
+                0x0804de33                rtsmb_cli_ez_open
+                0x0804dec2                rtsmb_cli_ez_rename
+                0x0804df7b                rtsmb_cli_ez_delete
+                0x0804dfdf                rtsmb_cli_ez_mkdir
+                0x0804e043                rtsmb_cli_ez_rmdir
+                0x0804e0a7                rtsmb_cli_ez_find_first
+                0x0804e112                rtsmb_cli_ez_stat
+                0x0804e17d                rtsmb_cli_ez_chmode
+                0x0804e1e8                rtsmb_cli_ez_get_free
+                0x0804e268                rtsmb_cli_ez_get_cwd
+                0x0804e303                rtsmb_cli_ez_set_cwd
+                0x0804e367                rtsmb_cli_session_logon_user_uc
+                0x0804e38f                rtsmb_cli_session_open_uc
+                0x0804e3c5                rtsmb_cli_session_rename_uc
+                0x0804e3ed                rtsmb_cli_session_delete_uc
+                0x0804e40e                rtsmb_cli_session_mkdir_uc
+                0x0804e42f                rtsmb_cli_session_rmdir_uc
+                0x0804e450                rtsmb_cli_session_find_first_uc
+                0x0804e478                rtsmb_cli_session_stat_uc
+                0x0804e4a0                rtsmb_cli_session_chmode_uc
+                0x0804e4c8                rtsmb_cli_ez_set_user_uc
+                0x0804e4e9                rtsmb_cli_ez_open_uc
+                0x0804e50a                rtsmb_cli_ez_rename_uc
+                0x0804e524                rtsmb_cli_ez_delete_uc
+                0x0804e537                rtsmb_cli_ez_mkdir_uc
+                0x0804e54a                rtsmb_cli_ez_rmdir_uc
+                0x0804e55d                rtsmb_cli_ez_find_first_uc
+                0x0804e577                rtsmb_cli_ez_stat_uc
+                0x0804e591                rtsmb_cli_ez_chmode_uc
+                0x0804e5ab                rtsmb_cli_ez_get_free_uc
+                0x0804e5da                rtsmb_cli_ez_get_cwd_uc
+                0x0804e5f4                rtsmb_cli_ez_set_cwd_uc
+ ** fill        0x0804e607        0x1
+ .text          0x0804e608      0x466 bin/rtsmbclientlib.a(clicfg.o)
+                0x0804e608                rtsmb_client_config
+ ** fill        0x0804ea6e        0x2
+ .text          0x0804ea70     0x3475 bin/rtsmbclientlib.a(cliez.o)
+                0x0804ea70                rtsmb_cli_ez_set_user_rt
+                0x0804f2d9                rtsmb_cli_ez_parse_uri_char
+                0x08050034                rtsmb_cli_ez_setup_char
+                0x08050128                rtsmb_cli_ez_open_rt
+                0x080501b7                rtsmb_cli_ez_open_uri
+                0x08050261                rtsmb_cli_ez_read
+                0x08050318                rtsmb_cli_ez_write
+                0x080503cf                rtsmb_cli_ez_seek
+                0x08050446                rtsmb_cli_ez_close
+                0x080504aa                rtsmb_cli_ez_truncate
+                0x08050515                rtsmb_cli_ez_flush
+                0x08050579                rtsmb_cli_ez_rename_rt
+                0x08050715                rtsmb_cli_ez_delete_rt
+                0x08050803                rtsmb_cli_ez_mkdir_rt
+                0x080508f1                rtsmb_cli_ez_rmdir_rt
+                0x080509df                rtsmb_cli_ez_find_first_rt
+                0x0805115c                rtsmb_cli_ez_find_next
+                0x08051807                rtsmb_cli_ez_find_close
+                0x08051926                rtsmb_cli_ez_stat_rt
+                0x08051aad                rtsmb_cli_ez_chmode_rt
+                0x08051ba2                rtsmb_cli_ez_get_free_rt
+                0x08051cbd                rtsmb_cli_ez_set_cwd_rt
+                0x08051e9e                rtsmb_cli_ez_get_cwd_rt
+ ** fill        0x08051ee5        0x3
+ .text          0x08051ee8     0xd814 bin/rtsmbclientlib.a(clissn.o)
+                0x08051fc1                rtsmb_cli_session_get_session
+                0x080521c8                rtsmb_cli_session_update_timestamp
+                0x080521db                rtsmb_cli_session_resolve_name
+                0x080528b3                rtsmb_cli_session_close_session
+                0x08052485                rtsmb_cli_session_new_with_ip
+                0x080531a9                rtsmb_cli_session_wait_for_job
+                0x08052d04                rtsmb_cli_session_cycle
+                0x08052813                rtsmb_cli_session_new_with_name
+                0x080528ea                rtsmb_cli_session_restart
+                0x08052918                rtsmb_cli_session_set_blocking
+                0x08053494                rtsmb_cli_session_logon_user_rt
+                0x080537eb                rtsmb_cli_session_connect_share
+                0x08053e15                rtsmb_cli_session_open_rt
+                0x08056e99                rtsmb_cli_session_send_stalled_jobs
+                0x080530e0                rtsmb_cli_session_set_job_callback
+                0x0805333a                rtsmb_cli_session_fill_header
+                0x080569ee                rtsmb_cli_session_get_free_job
+                0x080536d3                rtsmb_cli_session_logoff_user
+                0x08056caf                rtsmb_cli_session_get_share
+                0x08056c3c                rtsmb_cli_session_get_free_share
+                0x08056c2e                rtsmb_cli_session_share_close
+                0x080539db                rtsmb_cli_session_disconnect_share
+                0x08053b2d                rtsmb_cli_session_read
+                0x08056e03                rtsmb_cli_session_get_fid
+                0x08053ca1                rtsmb_cli_session_write
+                0x08053fbb                rtsmb_cli_session_close
+                0x08054100                rtsmb_cli_session_seek
+                0x08054288                rtsmb_cli_session_truncate
+                0x080543d6                rtsmb_cli_session_flush
+                0x08054511                rtsmb_cli_session_rename_rt
+                0x08054676                rtsmb_cli_session_delete_rt
+                0x080547c3                rtsmb_cli_session_mkdir_rt
+                0x08054910                rtsmb_cli_session_rmdir_rt
+                0x08054a5d                rtsmb_cli_session_find_first_rt
+                0x08054bfc                rtsmb_cli_session_find_next
+                0x08054dac                rtsmb_cli_session_find_close
+                0x08054ed6                rtsmb_cli_session_stat_rt
+                0x08055039                rtsmb_cli_session_chmode_rt
+                0x08055192                rtsmb_cli_session_full_server_enum
+                0x080552e0                rtsmb_cli_session_get_free
+                0x08055446                rtsmb_cli_session_share_find_first
+                0x08055581                rtsmb_cli_session_share_find_next
+                0x0805565c                rtsmb_cli_session_share_find_close
+                0x0805586c                rtsmb_cli_session_server_enum_start
+                0x08055b32                rtsmb_cli_session_server_enum_cycle
+                0x08055f8a                _rtsmb_cli_session_server_enum_next_name
+                0x08056103                rtsmb_cli_session_server_enum_next_name
+                0x08056125                rtsmb_cli_session_server_enum_next_name_uc
+                0x08056147                rtsmb_cli_session_server_enum_close
+                0x080561dc                rtsmb_cli_session_job_cleanup
+                0x080566b9                rtsmb_cli_session_translate_error32
+                0x08056e8b                rtsmb_cli_session_user_close
+                0x08057b44                rtsmb_cli_session_send_tree_connect_job
+                0x08057f80                rtsmb_cli_session_send_read_job
+                0x080581e0                rtsmb_cli_session_send_write_job
+                0x0805890d                rtsmb_cli_session_send_create_job
+                0x08058eb7                rtsmb_cli_session_receive_create_job
+                0x0805cdad                rtsmb_cli_session_receive_read_job
+                0x0805cf5c                rtsmb_cli_session_receive_write_job
+ .text          0x0805f6fc     0x1b11 bin/rtsmbclientlib.a(cliwire.o)
+                0x0805f8cf                rtsmb_cli_wire_get_buffer
+                0x0805f956                rtsmb_cli_wire_session_new
+                0x0805faef                rtsmb_cli_wire_start_connect
+                0x0805faab                rtsmb_cli_wire_session_close
+                0x0805fc8a                rtsmb_cli_wire_connect_cycle
+                0x080603d8                rtsmb_debug_echo
+                0x080605dc                rtsmb_cli_wire_awaken_requests
+                0x08060c77                rtsmb_cli_wire_cycle
+                0x08060c91                rtsmb_cli_wire_check_message
+                0x08060d43                rtsmb_cli_wire_smb2_add_start
+                0x08060dca                rtsmb_cli_wire_smb_add_start
+                0x08060e51                rtsmb_cli_wire_smb_add_header
+                0x08060f1a                rtsmb_cli_wire_smb_add_data
+                0x08060f63                rtsmb_cli_wire_smb_add_end
+                0x08061088                rtsmb_cli_wire_smb_read_start
+                0x080610f4                rtsmb_cli_wire_smb_read_header
+                0x0806118b                rtsmb_cli_wire_smb_read_end
+                0x080611cc                rtsmb_cli_wire_smb_close
+ ** fill        0x0806120d        0x3
+ .text          0x08061210      0x14c bin/rtsmbclientlib.a(psmbnet.o)
+                0x08061210                rtsmb_netport_select_n_for_read
+ .text          0x0806135c       0x99 bin/rtsmbclientlib.a(smbbrcfg.o)
+                0x0806135c                rtsmb_browse_config
+ ** fill        0x080613f5        0x3
+ .text          0x080613f8       0x99 bin/rtsmbclientlib.a(smbdebug.o)
+                0x080613f8                _rtsmb_debug_output_str
+                0x08061459                _rtsmb_debug_output_int
+                0x08061475                _rtsmb_debug_output_dint
+ ** fill        0x08061491        0x3
+ .text          0x08061494        0x0 bin/rtsmbclientlib.a(smbglue.o)
+ .text          0x08061494      0xa67 bin/rtsmbclientlib.a(smbnbds.o)
+                0x08061494                smb_print_unicode
+                0x08061527                rtsmb_nbds_write
+                0x08061566                rtsmb_nbds_get_next_datagram_id
+                0x0806157f                rtsmb_nbds_get_last_remote_name
+                0x08061589                rtsmb_nbds_get_last_remote_port
+                0x08061593                rtsmb_nbds_get_last_remote_ip
+                0x08061976                rtsmb_nbds_init
+                0x08061a6e                rtsmb_nbds_cycle
+                0x08061d85                rtsmb_nbds_shutdown
+                0x08061de2                rtsmb_nbds_get_backup_server
+                0x08061ef1                rtsmb_nbds_get_socket
+ ** fill        0x08061efb        0x1
+ .text          0x08061efc     0x1145 bin/rtsmbclientlib.a(smbnbns.o)
+                0x08061efc                rtsmb_nbns_fill_header
+                0x08062077                rtsmb_nbns_read_header
+                0x080621d5                rtsmb_nbns_fill_question
+                0x080622e1                rtsmb_nbns_read_question
+                0x080623f0                rtsmb_nbns_fill_resource
+                0x080625ed                rtsmb_nbns_read_resource
+                0x08062877                rtsmb_nbns_fill_name_query
+                0x0806298a                rtsmb_nbns_read_name_query_response
+                0x08062c44                rtsmb_nbns_query_name
+                0x08062ccd                rtsmb_nbns_query_cycle
+                0x08062f5d                rtsmb_nbns_get_name_query_response
+                0x08063017                rtsmb_nbns_close_query
+ ** fill        0x08063041        0x3
+ .text          0x08063044      0x33e bin/rtsmbclientlib.a(smbnbss.o)
+                0x08063044                rtsmb_nbss_fill_request
+                0x0806311a                rtsmb_nbss_read_request
+                0x08063214                rtsmb_nbss_fill_header
+                0x080632bb                rtsmb_nbss_read_header
+ ** fill        0x08063382        0x2
+ .text          0x08063384      0x81a bin/rtsmbclientlib.a(smbnet.o)
+                0x08063384                rtsmb_init_port_alt
+                0x080633b1                rtsmb_init_port_well_know
+                0x08063468                rtsmb_net_read
+                0x0806369d                rtsmb_net_write
+                0x080636ef                rtsmb_net_read_datagram
+                0x080638f9                rtsmb_net_ip_to_str
+                0x080637c0                rtsmb_net_write_datagram
+                0x08063828                rtsmb_net_str_to_ip
+                0x08063979                rtsmb_net_socket_new
+                0x08063a8a                rtsmb_net_set_ip
+                0x08063b7e                rtsmb_net_get_host_ip
+                0x08063b88                rtsmb_net_get_broadcast_ip
+                0x08063b92                rtsmb_net_are_valid_ips
+ ** fill        0x08063b9e        0x2
+ .text          0x08063ba0      0x53d bin/rtsmbclientlib.a(smbpack.o)
+                0x08063ba0                rtsmb_pack_add_unsafe
+                0x08063bc9                rtsmb_pack_add
+                0x08063c10                rtsmb_pack_add_ascii_string
+                0x08063d1f                rtsmb_pack_add_unicode_string
+                0x08063e02                rtsmb_pack_add_string
+                0x08063f34                rtsmb_pack_add_byte
+                0x08063eae                rtsmb_pack_add_string_direct
+                0x08063f0c                rtsmb_pack_add_byte_unsafe
+                0x08063f63                rtsmb_pack_add_word_unsafe
+                0x08063fb8                rtsmb_pack_add_word
+                0x08064014                rtsmb_pack_add_dword_unsafe
+                0x08064075                rtsmb_pack_add_dword
+ ** fill        0x080640dd        0x3
+ .text          0x080640e0      0x641 bin/rtsmbclientlib.a(smbread.o)
+                0x080640e0                rtsmb_read_unsafe
+                0x08064109                rtsmb_read
+                0x0806415e                rtsmb_read_skip
+                0x08064548                rtsmb_read_byte
+                0x080645cf                rtsmb_read_word
+                0x08064358                rtsmb_read_string
+                0x0806440c                rtsmb_read_string_bytes
+                0x08064526                rtsmb_read_byte_unsafe
+                0x08064571                rtsmb_read_word_unsafe
+                0x08064634                rtsmb_read_dword_unsafe
+                0x080646a7                rtsmb_read_dword
+ ** fill        0x08064721        0x3
+ .text          0x08064724     0x2827 bin/rtsmbclientlib.a(smbutil.o)
+                0x08064bf5                rtsmb_util_latin_to_unicode
+                0x080649ee                rtsmb_util_unicode_to_latin
+                0x080651c1                rtsmb_stricmp_latin
+                0x080654c8                rtsmb_strnicmp_latin
+                0x08064c43                rtsmb_util_n_latin_to_unicode
+                0x08064a44                rtsmb_util_n_unicode_to_latin
+                0x08064a9e                rtsmb_util_shiftjis_to_unicode
+                0x0806487f                rtsmb_util_unicode_to_shiftjis
+                0x0806529f                rtsmb_stricmp_sjis
+                0x080655c4                rtsmb_strnicmp_sjis
+                0x08064b33                rtsmb_util_n_shiftjis_to_unicode
+                0x08064932                rtsmb_util_n_unicode_to_shiftjis
+                0x080647a7                rtsmb_util_unicode_to_ascii
+                0x080647d6                rtsmb_util_ascii_to_unicode
+                0x08064805                rtsmb_util_n_unicode_to_ascii
+                0x08064842                rtsmb_util_n_ascii_to_unicode
+                0x08064d04                rtsmb_util_wlen
+                0x08064c8e                rtsmb_util_unicode_to_rtsmb
+                0x08064d75                rtsmb_util_wcpy
+                0x08064ca8                rtsmb_util_ascii_to_rtsmb
+                0x08064cc9                rtsmb_util_rtsmb_to_ascii
+                0x08064cea                rtsmb_util_rtsmb_to_unicode
+                0x08064d2c                rtsmb_util_wncpy
+                0x08064dc0                rtsmb_util_wncmp
+                0x08064e49                rtsmb_util_wcmp
+                0x08064ee5                rtsmb_util_wcat
+                0x08064f51                rtsmb_util_latin_toupper
+                0x08064f78                rtsmb_util_wtoupper
+                0x08064ff5                rtsmb_casecmp
+                0x080650d9                rtsmb_stricmp_uc
+                0x08065022                rtsmb_strcasecmp
+                0x08065064                rtsmb_casencmp
+                0x08065091                rtsmb_strcasencmp
+                0x080653c2                rtsmb_strnicmp_uc
+                0x08065701                rtsmb_util_string_to_upper
+                0x08065757                rtsmb_util_latin_string_toupper
+                0x080657ab                rtsmb_util_make_netbios_name
+                0x0806584e                rtsmb_util_unmake_netbios_name
+                0x080658b9                rtsmb_util_unicode_patcmp
+                0x08065a9f                rtsmb_util_ascii_patcmp
+                0x08065c31                rtsmb_util_rtsmb_patcmp
+                0x08065e77                cli_util_encrypt_password_pre_nt
+                0x08065f61                cli_util_encrypt_password_nt
+                0x0806607b                cli_util_encrypt_password_lmv2
+                0x0806642a                rtsmb_util_time_ms_to_unix
+                0x080664e9                rtsmb_util_time_unix_to_date
+                0x08066711                rtsmb_util_time_ms_to_date
+                0x08066742                rtsmb_util_time_date_to_ms
+                0x080667ff                rtsmb_util_time_date_to_unix
+                0x08066ccc                rtsmb_util_time_unix_to_ms
+                0x0806676c                rtsmb_util_time_rtp_date_to_ms
+                0x08066928                rtsmb_util_time_rtp_date_to_unix
+                0x080667ce                rtsmb_util_time_ms_to_rtp_date
+                0x08066a15                rtsmb_util_time_unix_to_rtp_date
+                0x08066c36                rtsmb_util_get_current_filetime
+                0x08066e3c                rtsmb_util_smb_to_rtsmb_attributes
+                0x08066ec9                rtsmb_util_rtsmb_to_smb_attributes
+ ** fill        0x08066f4b        0x1
+ .text          0x08066f4c      0x184 bin/rtsmbclientlib.a(rtpchar.o)
+                0x08066f4c                rtp_isalnum
+                0x08066f8f                rtp_iscntrl
+                0x08066fb2                rtp_isdigit
+                0x08066fd1                rtp_isprint
+                0x08066ff0                rtp_isspace
+                0x08067024                rtp_isupper
+                0x08067041                rtp_isxdigit
+                0x08067084                rtp_tolower
+                0x080670ab                rtp_toupper
+ .text          0x080670d0      0x408 bin/rtsmbclientlib.a(rtpscnv.o)
+                0x080670d0                rtp_itoa
+                0x08067126                rtp_ltoa
+                0x080671a9                rtp_ultoa
+                0x0806726c                rtp_strtol
+                0x080674b7                rtp_strtoul
+ .text          0x080674d8      0x7b5 bin/rtsmbclientlib.a(rtpstr.o)
+                0x080674d8                rtp_stricmp
+                0x0806756c                rtp_stristr
+                0x08067a4a                rtp_strlen
+                0x08067677                rtp_strnicmp
+                0x080675c1                rtp_strncmp
+                0x08067737                rtp_memchr
+                0x0806777d                rtp_memcmp
+                0x080677e1                rtp_memcpy
+                0x0806781c                rtp_memmove
+                0x0806788a                rtp_memset
+                0x080678ba                rtp_strcat
+                0x08067a03                rtp_strcpy
+                0x080678ea                rtp_strncat
+                0x08067a71                rtp_strncpy
+                0x0806794b                rtp_strchr
+                0x0806797b                rtp_strcmp
+                0x08067ab8                rtp_strrchr
+                0x08067aff                rtp_strstr
+                0x08067b54                rtp_memcat
+                0x08067b86                rtp_strpbrk
+                0x08067bd5                rtp_strspn
+                0x08067c31                rtp_strcspn
+ ** fill        0x08067c8d        0x3
+ .text          0x08067c90      0x813 bin/rtsmbclientlib.a(rtpwcs.o)
+                0x08067c90                rtp_wcsicmp
+                0x08067d2a                rtp_wcsistr
+                0x08068052                rtp_wcslen
+                0x08067e4c                rtp_wcsnicmp
+                0x08067d80                rtp_wcsncmp
+                0x08067f12                rtp_wcscat
+                0x08068011                rtp_wcscpy
+                0x08067f42                rtp_wcschr
+                0x08067f73                rtp_wcscmp
+                0x0806807a                rtp_wcsncpy
+                0x080680c3                rtp_wcsrchr
+                0x0806810a                rtp_wcsstr
+                0x08068160                rtp_wcstol
+                0x0806839c                rtp_wcsncat
+                0x080683e3                rtp_wcsspn
+                0x08068443                rtp_wcscspn
+ ** fill        0x080684a3        0x1
+ .text          0x080684a4      0x1a9 bin/rtsmbclientlib.a(rtpdebug.o)
+                0x080684a4                _rtp_debug_output_str
+                0x08068551                _rtp_debug_output_int
+                0x080685c2                _rtp_debug_syslog_printf
+ ** fill        0x0806864d        0x3
+ .text          0x08068650       0xd7 bin/rtsmbclientlib.a(rtpdate.o)
+                0x08068650                rtp_set_date
+                0x0806865a                rtp_get_date
+ ** fill        0x08068727        0x1
+ .text          0x08068728     0x2aa0 bin/rtsmbclientlib.a(rtpnet.o)
+                0x08068728                rtp_net_init
+                0x08068732                rtp_net_exit
+                0x08068737                rtp_net_socket_stream
+                0x080687e0                rtp_net_socket_stream_dual
+                0x080688bf                rtp_net_socket_datagram
+                0x08068968                rtp_net_socket_datagram_dual
+                0x08068a47                rtp_net_bind
+                0x08068be7                rtp_net_bind_dual
+                0x0806a99c                rtp_net_ip_to_str
+                0x08068e46                rtp_net_listen
+                0x08068ec2                rtp_net_getpeername
+                0x0806aa42                rtp_net_str_to_ip
+                0x08069059                rtp_net_getsockname
+                0x080691f0                rtp_net_gethostbyname
+                0x0806938d                rtp_net_accept
+                0x0806961a                rtp_net_connect
+                0x080697da                rtp_net_connect_dual
+                0x08069a2a                rtp_net_is_connected
+                0x08069c0d                rtp_net_write_select
+                0x08069c17                rtp_net_read_select
+                0x08069c21                rtp_net_send
+                0x08069d25                rtp_net_recv
+                0x08069e1d                rtp_net_sendto
+                0x0806a081                rtp_net_recvfrom
+                0x0806a309                rtp_net_closesocket
+                0x0806a38c                rtp_net_shutdown
+                0x0806a396                rtp_net_getntoread
+                0x0806a3a0                rtp_net_setblocking
+                0x0806a417                rtp_net_setnagle
+                0x0806a421                rtp_net_setlinger
+                0x0806a42b                rtp_net_setreusesock
+                0x0806a435                rtp_net_setreuseaddr
+                0x0806a43f                rtp_net_settcpnocopy
+                0x0806a449                rtp_net_setkeepalive
+                0x0806a453                rtp_net_setmembership
+                0x0806a6de                rtp_net_setmcastttl
+                0x0806a8a5                rtp_net_setbroadcast
+                0x0806a93a                rtp_net_htons
+                0x0806a958                rtp_net_ntohs
+                0x0806a976                rtp_net_htonl
+                0x0806a989                rtp_net_ntohl
+                0x0806abb5                rtp_fd_zero
+                0x0806abc3                rtp_fd_set
+                0x0806ac94                rtp_fd_isset
+                0x0806ac0e                rtp_fd_clr
+                0x0806ace7                rtp_net_select
+                0x0806b077                _rtp_to_fd_set
+                0x0806afee                _fd_set_to_rtp
+                0x0806b115                rtp_net_getifaceaddr
+                0x0806b1a5                rtp_net_get_node_address
+ .text          0x0806b1c8      0x451 bin/rtsmbclientlib.a(rtpsignl.o)
+                0x0806b1c8                _rtp_sig_semaphore_alloc
+                0x0806b256                _rtp_sig_semaphore_free
+                0x0806b288                _rtp_sig_semaphore_wait_timed
+                0x0806b36d                _rtp_sig_semaphore_clear
+                0x0806b38d                _rtp_sig_semaphore_wait
+                0x0806b42d                _rtp_sig_semaphore_signal
+                0x0806b46e                _rtp_sig_semaphore_signal_isr
+                0x0806b4af                _rtp_sig_mutex_alloc
+                0x0806b55f                _rtp_sig_mutex_free
+                0x0806b59d                _rtp_sig_mutex_claim_timed
+                0x0806b5a7                _rtp_sig_mutex_claim
+                0x0806b5e6                _rtp_sig_mutex_release
+ ** fill        0x0806b619        0x3
+ .text          0x0806b61c      0x704 bin/rtsmbclientlib.a(rtpterm.o)
+                0x0806ba6a                rtp_term_puts
+                0x0806b966                rtp_term_kbhit
+                0x0806ba0c                rtp_term_getch
+                0x0806ba3b                rtp_term_putc
+                0x0806ba89                rtp_term_cputs
+                0x0806bab7                rtp_term_gets
+                0x0806bb69                rtp_term_promptstring
+                0x0806bcee                rtp_term_up_arrow
+                0x0806bcf8                rtp_term_down_arrow
+                0x0806bd16                rtp_term_escape_key
+                0x0806bd02                rtp_term_left_arrow
+                0x0806bd0c                rtp_term_right_arrow
+ .text          0x0806bd20      0x337 bin/rtsmbclientlib.a(rtpthrd.o)
+                0x0806bd20                rtp_threads_init
+                0x0806bd56                rtp_threads_shutdown
+                0x0806bd6b                rtp_thread_spawn
+                0x0806c030                _rtp_allocThreadContext
+                0x0806c044                _rtp_freeThreadContext
+                0x0806bfdf                _rtp_threadFunction
+                0x0806bef4                rtp_thread_handle
+                0x0806bf25                rtp_thread_user_data
+                0x0806bf55                rtp_thread_user_data_by_handle
+                0x0806bf6a                rtp_thread_name
+                0x0806bf9a                rtp_thread_name_by_handle
+                0x0806bfaf                rtp_thread_sleep
+                0x0806bfcb                rtp_thread_yield
+ ** fill        0x0806c057        0x1
+ .text          0x0806c058       0x6f bin/rtsmbclientlib.a(rtptime.o)
+                0x0806c058                rtp_get_system_msec
+                0x0806c0a3                rtp_get_system_sec
+ ** fill        0x0806c0c7        0x1
+ .text          0x0806c0c8     0x48d0 bin/rtsmbclientlib.a(clians.o)
+                0x0806c161                cli_cmd_read_header
+                0x0806ccf9                cli_cmd_read_negotiate
+                0x0806cda0                cli_cmd_read_session_setup_and_x
+                0x0806d09e                cli_cmd_read_session_setup_and_x_ext_sec
+                0x0806d3dd                cli_cmd_read_logoff_and_x
+                0x0806d52a                cli_cmd_read_tree_connect_and_x
+                0x0806d7a7                cli_cmd_read_tree_disconnect
+                0x0806d7c1                cli_cmd_read_echo
+                0x0806d911                cli_cmd_read_read_and_x_up_to_data
+                0x0806dbd5                cli_cmd_read_read_and_x
+                0x0806dd21                cli_cmd_read_open_and_x
+                0x0806e0c1                cli_cmd_read_create_and_x
+                0x0806e64a                cli_cmd_read_close
+                0x0806e664                cli_cmd_read_write_and_x
+                0x0806e879                cli_cmd_read_write_raw_r1
+                0x0806e936                cli_cmd_read_write_raw_r2
+                0x0806e9f3                cli_cmd_read_seek
+                0x0806eac3                cli_cmd_read_write
+                0x0806eb93                cli_cmd_read_transaction
+                0x0806ed23                cli_cmd_read_find_first2
+                0x0806efa1                cli_cmd_read_find_next2
+                0x0806f1e8                cli_cmd_read_find_file_info_standard
+                0x0806f4ed                cli_cmd_read_info_standard
+                0x0806f7a9                cli_cmd_read_query_file_all_info
+                0x0806fe97                cli_cmd_read_enum_header
+                0x080700de                cli_cmd_read_share_enum_info
+                0x080702b4                cli_cmd_read_server_info_0
+                0x08070343                cli_cmd_read_server_info_1
+                0x08070575                cli_cmd_read_backup_list
+                0x080707b8                cli_cmd_read_info_allocation
+ .text          0x08070998     0x492e bin/rtsmbclientlib.a(clicmds.o)
+                0x08070a14                cli_cmd_fill_header
+                0x08070cfb                cli_cmd_fill_negotiate
+                0x08070e3d                cli_cmd_fill_session_setup_and_x_pre_nt
+                0x080712e7                cli_cmd_fill_session_setup_and_x_nt_ext_sec
+                0x080716cb                cli_cmd_fill_session_setup_and_x_nt
+                0x08071c6e                cli_cmd_fill_logoff_and_x
+                0x08071db4                cli_cmd_fill_tree_connect_and_x
+                0x08072072                cli_cmd_fill_tree_disconnect
+                0x0807208c                cli_cmd_fill_read_and_x_pre_nt
+                0x08072322                cli_cmd_fill_open_and_x
+                0x080726b2                cli_cmd_fill_create_and_x
+                0x08072b3f                cli_cmd_fill_close
+                0x08072c29                cli_cmd_fill_write_and_x
+                0x08073156                cli_cmd_fill_seek
+                0x0807327b                cli_cmd_fill_write
+                0x080734b5                cli_cmd_fill_flush
+                0x08073568                cli_cmd_fill_rename
+                0x0807374f                cli_cmd_fill_delete
+                0x080738b8                cli_cmd_fill_set_information
+                0x08073b61                cli_cmd_fill_create_directory
+                0x08073c90                cli_cmd_fill_delete_directory
+                0x08073dbf                cli_cmd_fill_transaction
+                0x08074219                cli_cmd_fill_trans2_find_first2
+                0x08074508                cli_cmd_fill_trans2_find_next2
+                0x080747f7                cli_cmd_fill_find_close2
+                0x080748aa                cli_cmd_fill_share_enum
+                0x08074b3f                cli_cmd_fill_rap_server_enum2
+                0x08074ed4                cli_cmd_fill_query_fs_information
+                0x0807508a                cli_cmd_fill_trans2_query_path_information
+ ** fill        0x080752c6        0x2
+ .text          0x080752c8      0x1b7 bin/rtsmbclientlib.a(ecb_enc.o)
+                0x080752c8                rtsmb_des_options
+                0x08075335                rtsmb_des_ecb_encrypt
+ ** fill        0x0807547f        0x1
+ .text          0x08075480      0x27b bin/rtsmbclientlib.a(hmac_md5.o)
+                0x08075480                hmac_md5
+ ** fill        0x080756fb        0x1
+ .text          0x080756fc       0x69 bin/rtsmbclientlib.a(md4_one.o)
+                0x080756fc                RTSMB_MD4
+ ** fill        0x08075765        0x3
+ .text          0x08075768      0xef1 bin/rtsmbclientlib.a(md5rsa.o)
+                0x08075768                MD5Init
+                0x080757aa                MD5Update
+                0x080758de                MD5Final
+ ** fill        0x08076659        0x3
+ .text          0x0807665c      0x48a bin/rtsmbclientlib.a(set_key.o)
+                0x0807665c                rtsmb_des_set_odd_parity
+                0x08076696                rtsmb_des_check_key_parity
+                0x080766e1                rtsmb_des_is_weak_key
+                0x0807672f                rtsmb_des_set_key
+                0x0807676b                rtsmb_des_set_key_checked
+                0x080767b6                rtsmb_des_set_key_unchecked
+                0x08076ab9                rtsmb_des_key_sched
+                0x08076ad3                rtsmb_des_fixup_key_parity
+ ** fill        0x08076ae6        0x2
+ .text          0x08076ae8     0x18a5 bin/rtsmbclientlib.a(smbbrbuf.o)
+                0x08076ae8                rtsmb_nbds_fill_header
+                0x08076d5a                rtsmb_nbds_read_header
+                0x08076fda                rtsmb_nbds_fill_smb_header
+                0x080772c1                rtsmb_nbds_read_smb_header
+                0x080775d2                rtsmb_nbds_fill_transaction
+                0x080779f2                rtsmb_nbds_read_transaction
+                0x08077eb6                rtsmb_nbds_read_get_backup_list
+                0x08077f6b                rtsmb_nbds_fill_get_backup_list
+                0x08078018                rtsmb_nbds_fill_whole_backup_list
+ ** fill        0x0807838d        0x3
+ .text          0x08078390      0x1fd bin/rtsmbclientlib.a(smbnb.o)
+                0x08078390                rtsmb_nb_fill_name
+                0x08078484                rtsmb_nb_read_name
+ ** fill        0x0807858d        0x3
+ .text          0x08078590      0x39b bin/rtsmbclientlib.a(smbsjis.o)
+                0x08078590                rtsmb_jis_to_unicode
+                0x080786ab                rtsmb_unicode_to_jis
+                0x080787b7                rtsmb_euc_jp_to_unicode
+                0x0807885c                rtsmb_unicode_to_euc_jp
+ ** fill        0x0807892b        0x1
+ .text          0x0807892c      0x1aa bin/rtsmbclientlib.a(rtpwchar.o)
+                0x0807892c                rtp_iswalnum
+                0x0807897b                rtp_iswcntrl
+                0x0807899e                rtp_iswdigit
+                0x080789c1                rtp_iswprint
+                0x080789e4                rtp_iswspace
+                0x08078a18                rtp_iswupper
+                0x08078a35                rtp_iswxdigit
+                0x08078a84                rtp_towlower
+                0x08078aad                rtp_towupper
+ ** fill        0x08078ad6        0x2
+ .text          0x08078ad8     0x193e bin/rtsmbclientlib.a(des_enc.o)
+                0x08078ad8                rtsmb_des_encrypt
+                0x080792a8                rtsmb_des_encrypt2
+                0x0807997d                rtsmb_des_encrypt3
+                0x08079af0                rtsmb_des_decrypt3
+                0x08079c63                rtsmb_des_ede3_cbc_encrypt
+ ** fill        0x0807a416        0x2
+ .text          0x0807a418      0xfbd bin/rtsmbclientlib.a(md4_dgst.o)
+                0x0807a418                RTSMB_MD4_Update
+                0x0807abef                rtsmb_md4_block_host_order
+                0x0807a8f5                RTSMB_MD4_Transform
+                0x0807a93d                RTSMB_MD4_Final
+                0x0807aba5                RTSMB_MD4_Init
+ ** fill        0x0807b3d5        0xb
+ .text          0x0807b3e0       0x72 /usr/lib/i386-linux-gnu/libc_nonshared.a(elf-init.oS)
+                0x0807b3e0                __libc_csu_init
+                0x0807b450                __libc_csu_fini
+ .text.__i686.get_pc_thunk.bx
+                0x0807b452        0x4 /usr/lib/i386-linux-gnu/libc_nonshared.a(elf-init.oS)
+                0x0807b452                __i686.get_pc_thunk.bx
+ ** fill        0x0807b456        0xa
+ .text          0x0807b460       0x2a /usr/lib/gcc/i686-linux-gnu/4.6/crtend.o
+ ** fill        0x0807b48a        0x2
+ .text          0x0807b48c        0x0 /usr/lib/gcc/i686-linux-gnu/4.6/../../../i386-linux-gnu/crtn.o
+
+.fini           0x0807b48c       0x1a
+ .fini          0x0807b48c       0x10 /usr/lib/gcc/i686-linux-gnu/4.6/../../../i386-linux-gnu/crti.o
+                0x0807b48c                _fini
+ .fini          0x0807b49c        0x5 /usr/lib/gcc/i686-linux-gnu/4.6/crtbegin.o
+ .fini          0x0807b4a1        0x5 /usr/lib/gcc/i686-linux-gnu/4.6/../../../i386-linux-gnu/crtn.o
+
+.rodata         0x0807b4c0     0xaa77
+ .rodata        0x0807b4c0        0x4 /usr/lib/gcc/i686-linux-gnu/4.6/../../../i386-linux-gnu/crt1.o
+                0x0807b4c0                _fp_hw
+ ** merge constants
+                0x0807b4c4        0x4
+ .rodata        0x0807b4c8     0x1508 bin/rtsmbclientlib.a(clishell.o)
+ .rodata        0x0807c9d0       0x3f bin/rtsmbclientlib.a(cliez.o)
+ .rodata        0x0807ca10      0x613 bin/rtsmbclientlib.a(clissn.o)
+ .rodata        0x0807d024      0x4f1 bin/rtsmbclientlib.a(cliwire.o)
+ .rodata        0x0807d515        0xa bin/rtsmbclientlib.a(smbdebug.o)
+ .rodata        0x0807d520      0x275 bin/rtsmbclientlib.a(smbnbds.o)
+ .rodata        0x0807d798       0x30 bin/rtsmbclientlib.a(smbnbns.o)
+ .rodata        0x0807d7c8      0x231 bin/rtsmbclientlib.a(smbnet.o)
+ .rodata        0x0807da00      0x150 bin/rtsmbclientlib.a(smbutil.o)
+ .rodata        0x0807db50        0x6 bin/rtsmbclientlib.a(rtpdebug.o)
+ .rodata        0x0807db58       0x5a bin/rtsmbclientlib.a(rtpdate.o)
+ .rodata        0x0807dbb4      0x432 bin/rtsmbclientlib.a(rtpnet.o)
+ .rodata        0x0807dfe8       0xf1 bin/rtsmbclientlib.a(rtpsignl.o)
+ .rodata        0x0807e0d9       0x14 bin/rtsmbclientlib.a(rtpterm.o)
+ .rodata        0x0807e0f0       0x14 bin/rtsmbclientlib.a(rtpthrd.o)
+                0x0807e0f0                stackSizeMap
+ .rodata        0x0807e104        0x4 bin/rtsmbclientlib.a(clians.o)
+ .rodata        0x0807e108       0x83 bin/rtsmbclientlib.a(clicmds.o)
+ .rodata        0x0807e18c       0x7c bin/rtsmbclientlib.a(ecb_enc.o)
+ .rodata        0x0807e220      0x900 bin/rtsmbclientlib.a(set_key.o)
+ .rodata        0x0807eb20       0x20 bin/rtsmbclientlib.a(smbbrbuf.o)
+ .rodata        0x0807eb40     0x6b7c bin/rtsmbclientlib.a(smbsjis.o)
+                0x0807eb40                rtsmb_ucode2jis
+ .rodata        0x080856c0      0x848 bin/rtsmbclientlib.a(des_enc.o)
+                0x080856c0                rtsmb_des_SPtrans
+ .rodata        0x08085f08       0x2f bin/rtsmbclientlib.a(md4_dgst.o)
+
+.eh_frame       0x08085f38     0x5eb0
+ ** eh_frame    0x08085f38     0x5eac
+ .eh_frame      0x0808bde4        0x4 /usr/lib/gcc/i686-linux-gnu/4.6/crtend.o
+
+.eh_frame_hdr   0x0808bde8     0x169c
+ ** eh_frame_hdr
+                0x0808bde8     0x169c
+
+.ctors          0x0808ef0c        0x8
+ .ctors         0x0808ef0c        0x4 /usr/lib/gcc/i686-linux-gnu/4.6/crtbegin.o
+ .ctors         0x0808ef10        0x4 /usr/lib/gcc/i686-linux-gnu/4.6/crtend.o
+
+.dtors          0x0808ef14        0x8
+ .dtors         0x0808ef14        0x4 /usr/lib/gcc/i686-linux-gnu/4.6/crtbegin.o
+ .dtors         0x0808ef18        0x4 /usr/lib/gcc/i686-linux-gnu/4.6/crtend.o
+                0x0808ef18                __DTOR_END__
+
+.jcr            0x0808ef1c        0x4
+ .jcr           0x0808ef1c        0x0 /usr/lib/gcc/i686-linux-gnu/4.6/crtbegin.o
+ .jcr           0x0808ef1c        0x4 /usr/lib/gcc/i686-linux-gnu/4.6/crtend.o
+
+.dynamic        0x0808ef20       0xd0
+ ** dynamic     0x0808ef20       0xd0
+
+.got            0x0808eff0        0x4
+ ** GOT         0x0808eff0        0x4
+
+.got.plt        0x0808eff4      0x12c
+ ** GOT PLT     0x0808eff4      0x12c
+ ** GOT IRELATIVE PLT
+                0x0808f120        0x0
+ ** GOT         0x0808f120        0x0
+
+.data           0x0808f120     0xb688
+ .data          0x0808f120        0x4 /usr/lib/gcc/i686-linux-gnu/4.6/../../../i386-linux-gnu/crt1.o
+                0x0808f120                data_start
+                0x0808f120                __data_start
+ .data          0x0808f124        0x0 /usr/lib/gcc/i686-linux-gnu/4.6/../../../i386-linux-gnu/crti.o
+ .data          0x0808f124        0x4 /usr/lib/gcc/i686-linux-gnu/4.6/crtbegin.o
+                0x0808f124                __dso_handle
+ .data          0x0808f128        0x0 bin/rtsmbclientapplication.o
+ .data          0x0808f128        0x0 bin/rtsmbclientlib.a(climain.o)
+ .data          0x0808f140      0x260 bin/rtsmbclientlib.a(clishell.o)
+                0x0808f140                my_ip
+                0x0808f144                my_mask
+                0x0808f148                enum_cmd
+                0x0808f14c                lookup_cmd
+                0x0808f150                shares_cmd
+                0x0808f154                ls_cmd
+                0x0808f158                cat_cmd
+                0x0808f15c                read_cmd
+                0x0808f160                fill_cmd
+                0x0808f164                setserver_cmd
+                0x0808f168                setshare_cmd
+                0x0808f16c                setuser_cmd
+                0x0808f170                setpassword_cmd
+                0x0808f174                del_cmd
+                0x0808f178                mkdir_cmd
+                0x0808f17c                rmdir_cmd
+                0x0808f180                loop_cmd
+                0x0808f184                quit_cmd
+                0x0808f188                net_cmd
+                0x0808f18c                logoff_cmd
+                0x0808f190                dump_cmd
+                0x0808f2a0                gl_server_name
+ .data          0x0808f3a0        0x0 bin/rtsmbclientlib.a(cliapi.o)
+ .data          0x0808f3a0        0x4 bin/rtsmbclientlib.a(clicfg.o)
+                0x0808f3a0                prtsmb_cli_ctx
+ .data          0x0808f3c0      0x222 bin/rtsmbclientlib.a(cliez.o)
+ .data          0x0808f5e4       0x72 bin/rtsmbclientlib.a(clissn.o)
+ .data          0x0808f658        0x0 bin/rtsmbclientlib.a(cliwire.o)
+ .data          0x0808f658        0x0 bin/rtsmbclientlib.a(psmbnet.o)
+ .data          0x0808f658        0x0 bin/rtsmbclientlib.a(smbbrcfg.o)
+ .data          0x0808f658        0x0 bin/rtsmbclientlib.a(smbdebug.o)
+ .data          0x0808f658        0x0 bin/rtsmbclientlib.a(smbglue.o)
+ .data          0x0808f658        0x0 bin/rtsmbclientlib.a(smbnbds.o)
+ .data          0x0808f658        0x0 bin/rtsmbclientlib.a(smbnbns.o)
+ .data          0x0808f658        0x0 bin/rtsmbclientlib.a(smbnbss.o)
+ .data          0x0808f658       0x10 bin/rtsmbclientlib.a(smbnet.o)
+                0x0808f658                rtsmb_nbds_port
+                0x0808f65c                rtsmb_nbns_port
+                0x0808f660                rtsmb_nbss_port
+                0x0808f664                rtsmb_nbss_direct_port
+ .data          0x0808f668        0x0 bin/rtsmbclientlib.a(smbpack.o)
+ .data          0x0808f668        0x0 bin/rtsmbclientlib.a(smbread.o)
+ .data          0x0808f680       0x3c bin/rtsmbclientlib.a(smbutil.o)
+                0x0808f680                cpTable
+ .data          0x0808f6bc        0x0 bin/rtsmbclientlib.a(rtpchar.o)
+ .data          0x0808f6bc        0x0 bin/rtsmbclientlib.a(rtpscnv.o)
+ .data          0x0808f6bc        0x0 bin/rtsmbclientlib.a(rtpstr.o)
+ .data          0x0808f6bc        0x0 bin/rtsmbclientlib.a(rtpwcs.o)
+ .data          0x0808f6bc        0x0 bin/rtsmbclientlib.a(rtpdebug.o)
+ .data          0x0808f6bc        0x0 bin/rtsmbclientlib.a(rtpdate.o)
+ .data          0x0808f6bc        0x0 bin/rtsmbclientlib.a(rtpnet.o)
+ .data          0x0808f6bc        0x0 bin/rtsmbclientlib.a(rtpsignl.o)
+ .data          0x0808f6bc        0x4 bin/rtsmbclientlib.a(rtpterm.o)
+ .data          0x0808f6c0        0x0 bin/rtsmbclientlib.a(rtpthrd.o)
+ .data          0x0808f6c0        0x0 bin/rtsmbclientlib.a(rtptime.o)
+ .data          0x0808f6c0        0x0 bin/rtsmbclientlib.a(clians.o)
+ .data          0x0808f6c0        0x0 bin/rtsmbclientlib.a(clicmds.o)
+ .data          0x0808f6c0        0xc bin/rtsmbclientlib.a(ecb_enc.o)
+                0x0808f6c0                libdes_version
+                0x0808f6c4                RTSMB_DES_version
+ .data          0x0808f6cc        0x0 bin/rtsmbclientlib.a(hmac_md5.o)
+ .data          0x0808f6cc        0x0 bin/rtsmbclientlib.a(md4_one.o)
+ .data          0x0808f6e0       0x40 bin/rtsmbclientlib.a(md5rsa.o)
+ .data          0x0808f720       0xc0 bin/rtsmbclientlib.a(set_key.o)
+ .data          0x0808f7e0       0x22 bin/rtsmbclientlib.a(smbbrbuf.o)
+ .data          0x0808f804        0x0 bin/rtsmbclientlib.a(smbnb.o)
+ .data          0x0808f820     0xaf84 bin/rtsmbclientlib.a(smbsjis.o)
+                0x0808f820                giJapaneseToUnicode
+                0x08093d40                giUnicodeToEucJp
+ .data          0x0809a7a4        0x0 bin/rtsmbclientlib.a(rtpwchar.o)
+ .data          0x0809a7a4        0x0 bin/rtsmbclientlib.a(des_enc.o)
+ .data          0x0809a7a4        0x4 bin/rtsmbclientlib.a(md4_dgst.o)
+                0x0809a7a4                RTSMB_MD4_version
+ .data          0x0809a7a8        0x0 /usr/lib/i386-linux-gnu/libc_nonshared.a(elf-init.oS)
+ .data          0x0809a7a8        0x0 /usr/lib/gcc/i686-linux-gnu/4.6/crtend.o
+ .data          0x0809a7a8        0x0 /usr/lib/gcc/i686-linux-gnu/4.6/../../../i386-linux-gnu/crtn.o
+
+.bss            0x0809a7c0    0x16ea4
+ .bss           0x0809a7c0        0x0 /usr/lib/gcc/i686-linux-gnu/4.6/../../../i386-linux-gnu/crt1.o
+ .bss           0x0809a7c0        0x0 /usr/lib/gcc/i686-linux-gnu/4.6/../../../i386-linux-gnu/crti.o
+ .bss           0x0809a7c0        0x8 /usr/lib/gcc/i686-linux-gnu/4.6/crtbegin.o
+ .bss           0x0809a7c8        0x0 bin/rtsmbclientapplication.o
+ .bss           0x0809a7c8        0x0 bin/rtsmbclientlib.a(climain.o)
+ .bss           0x0809a7e0      0x740 bin/rtsmbclientlib.a(clishell.o)
+ .bss           0x0809af20        0x0 bin/rtsmbclientlib.a(cliapi.o)
+ .bss           0x0809af20    0x15028 bin/rtsmbclientlib.a(clicfg.o)
+                0x0809af20                rtsmb_client_config_initialized
+ .bss           0x080aff60      0x242 bin/rtsmbclientlib.a(cliez.o)
+ .bss           0x080b01a4        0x0 bin/rtsmbclientlib.a(clissn.o)
+ .bss           0x080b01c0      0x400 bin/rtsmbclientlib.a(cliwire.o)
+ .bss           0x080b05c0        0x0 bin/rtsmbclientlib.a(psmbnet.o)
+ .bss           0x080b05c0      0x454 bin/rtsmbclientlib.a(smbbrcfg.o)
+                0x080b05c0                rtsmb_browse_config_initialized
+ .bss           0x080b0a14        0x0 bin/rtsmbclientlib.a(smbdebug.o)
+ .bss           0x080b0a14       0x14 bin/rtsmbclientlib.a(smbglue.o)
+                0x080b0a14                rtsmb_glue_get_server_name_from_cache
+                0x080b0a18                rtsmb_glue_are_other_workgroups
+                0x080b0a1c                rtsmb_glue_do_we_have_server_list
+                0x080b0a20                rtsmb_glue_get_our_server_name
+                0x080b0a24                rtsmb_glue_process_nbds_message
+ .bss           0x080b0a28       0x39 bin/rtsmbclientlib.a(smbnbds.o)
+ .bss           0x080b0a64        0x0 bin/rtsmbclientlib.a(smbnbns.o)
+ .bss           0x080b0a64        0x0 bin/rtsmbclientlib.a(smbnbss.o)
+ .bss           0x080b0a64        0x9 bin/rtsmbclientlib.a(smbnet.o)
+ .bss           0x080b0a70        0x0 bin/rtsmbclientlib.a(smbpack.o)
+ .bss           0x080b0a70        0x0 bin/rtsmbclientlib.a(smbread.o)
+ .bss           0x080b0a70        0x0 bin/rtsmbclientlib.a(smbutil.o)
+ .bss           0x080b0a70        0x0 bin/rtsmbclientlib.a(rtpchar.o)
+ .bss           0x080b0a70        0x0 bin/rtsmbclientlib.a(rtpscnv.o)
+ .bss           0x080b0a70        0x0 bin/rtsmbclientlib.a(rtpstr.o)
+ .bss           0x080b0a70        0x0 bin/rtsmbclientlib.a(rtpwcs.o)
+ .bss           0x080b0a70        0x0 bin/rtsmbclientlib.a(rtpdebug.o)
+ .bss           0x080b0a70        0x0 bin/rtsmbclientlib.a(rtpdate.o)
+ .bss           0x080b0a70        0x4 bin/rtsmbclientlib.a(rtpnet.o)
+                0x080b0a70                rtpnetOpenSockets
+ .bss           0x080b0a74        0x0 bin/rtsmbclientlib.a(rtpsignl.o)
+ .bss           0x080b0a80       0xdc bin/rtsmbclientlib.a(rtpterm.o)
+                0x080b0a80                kbrawmode
+ .bss           0x080b0b5c        0x4 bin/rtsmbclientlib.a(rtpthrd.o)
+ .bss           0x080b0b60        0x0 bin/rtsmbclientlib.a(rtptime.o)
+ .bss           0x080b0b60        0x0 bin/rtsmbclientlib.a(clians.o)
+ .bss           0x080b0b60        0x0 bin/rtsmbclientlib.a(clicmds.o)
+ .bss           0x080b0b60       0x20 bin/rtsmbclientlib.a(ecb_enc.o)
+ .bss           0x080b0b80        0x0 bin/rtsmbclientlib.a(hmac_md5.o)
+ .bss           0x080b0b80       0x10 bin/rtsmbclientlib.a(md4_one.o)
+ .bss           0x080b0b90        0x0 bin/rtsmbclientlib.a(md5rsa.o)
+ .bss           0x080b0b90        0x4 bin/rtsmbclientlib.a(set_key.o)
+                0x080b0b90                rtsmb_des_check_key
+ .bss           0x080b0b94        0x0 bin/rtsmbclientlib.a(smbbrbuf.o)
+ .bss           0x080b0b94        0x0 bin/rtsmbclientlib.a(smbnb.o)
+ .bss           0x080b0b94        0x0 bin/rtsmbclientlib.a(smbsjis.o)
+ .bss           0x080b0b94        0x0 bin/rtsmbclientlib.a(rtpwchar.o)
+ .bss           0x080b0b94        0x0 bin/rtsmbclientlib.a(des_enc.o)
+ .bss           0x080b0b94        0x0 bin/rtsmbclientlib.a(md4_dgst.o)
+ .bss           0x080b0b94        0x0 /usr/lib/i386-linux-gnu/libc_nonshared.a(elf-init.oS)
+ .bss           0x080b0b94        0x0 /usr/lib/gcc/i686-linux-gnu/4.6/crtend.o
+ .bss           0x080b0b94        0x0 /usr/lib/gcc/i686-linux-gnu/4.6/../../../i386-linux-gnu/crtn.o
+ ** common      0x080b0ba0      0xa78
+ ** dynbss      0x080b1620       0x44

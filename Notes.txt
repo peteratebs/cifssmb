@@ -1,0 +1,65 @@
+
+
+NetBIOS Name service.
+
+.. Port 137 UDP - The Name Service runs on UDP port 137 - Client sends 16 Byte name and in B mode it's broadcast and the ip address is replied.
+In P mode it's sent to an NBNS server.
+
+NetBIOS Datagram service.
+
+.. Port 138 UDP The Datagram Distribution Service is the NBT service that handles NetBIOS datagram transport.
+It runs on UDP port 138, and can handle unicast (also known as "specific"), multicast (group), and broadcast NetBIOS datagrams.
+
+NetBIOS session service.
+
+.. Port 139 is the session servide. Used by smb.
+
+Changed port numbers so can run on local host
+
+Click on comms with wireshark to change interpretation.
+
+#define RTSMB_NBSS_PORT                 9139  // PVOPVO
+#define RTSMB_NBNS_PORT                 9137 // PVOPVO
+#define RTSMB_NBSS_DIRECT_PORT          9445  // PVOPVO
+#define RTSMB_NBDS_PORT                 9138  // PVOPVO
+
+
+RTSMB_NBSS_DIRECT_PORT        Is not supported on the server, only client, needs to be fixed.
+
+RTSMB_NBSS_DIRECT_PORT        Is not supported on the server, only client, needs to be fixed.
+    Added support to server moudule temorarily by enabling only 445.
+Todo
+    Need to offer both 445 and 139, not just a compile time flag
+
+Fixed - SR_GetTreeId, Was failing on IPC
+
+Todo
+    Playwith IPC now that they function
+
+Todo Identify connect sequence server
+ProcNegotiateProtocol calls
+        WRITE_SMB (srv_cmd_fill_negotiate_nt);
+
+        srv_cmd_fill_negotiate_nt - Is in srvans
+            We need srvans V2 to write out the V2 header
+        On an SMBNT
+        For V2 we need
+            WRITE_SMB (srv_cmd_fill_negotiate_v2);
+Todo Identify connect sequence client
+        rtsmb_cli_session_send_negotiate - needs to send V2 dialect string
+        rtsmb_cli_session_receive_negotiate - needs to process response
+
+        See pg 22 of spec for alias strings- Support SMB 2.002 initially SMB2 NEGOTIATE Response
+        See pg 39 of spec for alias strings- Support SMB2 NEGOTIATE Response format
+
+Test ebs client to serve using port 139 for session.
+
+Notes:
+
+    About log on -
+
+        smbv2 security blob get sent with connection rtsmb_cli_session_new_with_ip
+        for V2 log in we need:
+            Blob extracted from rtsmb_cli_session_logon_user
+
+         [MS-AUTHSOD] section 2.1.2.2.

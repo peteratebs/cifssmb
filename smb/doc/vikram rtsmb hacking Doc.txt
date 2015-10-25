@@ -1,0 +1,92 @@
+For every operation like file open , save, rename, save etc The smb client
+sends requests to EBS server. In my tests the smb client was windows xp's
+network neighbourhood.
+
+The best approach to get understanding of what is going, like for any
+operation what are the requests that the client is sending to the server
+OPEN UP a packet capture utility (I use pactyzer which is free and is
+basedon ethereal .. ethereal should be fine too). The good thing about a
+packet capture is that it decodeds in human readable form the smb
+requests/responses and tell us what is the request that was send and what
+was the response send by the server.
+I am attaching a screenshot to explain of what I mean. Do not try to look at
+actual bits that are transferred between server and client .. it will not
+make sense but look at the paket summary of the packet capture utility. Look
+at the attahed file 'packet capture example.jpg' and you will understand
+what I mean.
+
+Next, see what is happening for each operation,
+You will notice that there are difference categories of commands requests
+that the client sends to server for any operation for example ANDX kind,
+Trans2 kind, Set Session, rename, etc. the is waiting in a while loop to
+receieve these commands and process them one at a time and sends response to
+each.
+
+For every operation,  client sends out one request at a time to the server,
+all these requests are needed to perform this one operation... the server
+receives these requests and sends out responses to each.
+
+An exampe of  requests send by the client to the server in my tests for
+rename and delete commands is attached in file 'understanding server.txt' .
+Notice that the rename command was successfull because the server responded
+successsully to each of clients request. But for 'Delete" command the server
+returned an error for 'SET FILE INFO' request. So the solution is simple ..
+if we make this command work, i.e. if the server does not return an error
+for this command delete will be successfull.
+
+Next,
+Let us see what happens when a request comes to the server, the request goes
+to function SMBS_ProcSMBBody ( ) in file srvssn.c. This function is
+responsible for
+processing the message body of a request. What this function does is
+depending on what type of request it is it calles different request
+handlers. (You will find a case statement and cases to handle different
+types of messages like NEGOTIATE, NT_CREATE_ANDX, READ_ANDX, TRANSACTION2
+etc.).
+
+Since this message was a trans2 type, function ProcTransaction2 ( ) is
+invoked to handle this type of request. Now, this function is responsible
+for processing all trans2 type of requests. You will find that again there
+can be different kind of trans2 requests and this function has cases to
+handle each of them. Our request ''SET FILE INFO'' is of type
+TRANS2_SET_FILE_INFORMATION so this invokes ST2_SetFileInformation ( )
+function. To handle this command.
+
+Function  ST2_SetFileInformation ( ) in file srvTran2.c is responsible for
+handling all ''SET FILE INFO''  type of commands, in our case for 'Delete'
+command the client passes
+'SMB_SET_FILE_DISPOSITION_INFO' (value 102) as  the command parameter. But
+you will notice that this case is not present in this function. (Cases
+SMB_INFO_STANDARD, SMB_SET_FILE_BASIC_INFO, SMB_SET_FILE_ALLOCATION_INFO etc
+are present)
+
+Implementing this case:: to experiment with this case, I added this case
+'SMB_SET_FILE_DISPOSITION_INFO' with just a break
+
+case SMB_SET_FILE_ALLOCATION_INFO: /* silently ignore this level of detail
+since
+                                     the file sys doesn't care and we don't
+need
+                                     to send an error. */
+   break;
+  case SMB_SET_FILE_DISPOSITION_INFO:
+break;
+
+Putting this case here results in server no more sending a "command not
+supported" error message to the client. The client thinks that the delete
+command was successful and it removes the file from its local folder, (
+later on the file will reappear when the client refreshes the server
+information because the file is actually present on the server).
+
+So the actual solution is to implement a function here which will delete the
+file from server's local file system. THere are 2 ways, fro this case
+implement a a function which calls
+ProcDelete ( ) in file srvssn.c or directly SMBFIO_Delete ( ) to delete the
+file on the server. If the file is no longer on ther server the client will
+delete the file locally and the file will not reapper upon refresh.
+
+Apply the same case to SMB_SET_FILE_END_OF_FILE_INFO.
+
+Also, I was able to rewrite the files on EBS server using windows XP client,
+this feature is already supported.
+

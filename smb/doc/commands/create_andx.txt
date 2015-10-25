@@ -1,0 +1,144 @@
+(from draft-leach-cifs-v1-spec-01.txt)
+
+4.2.1      NT_CREATE_ANDX: Create or Open File
+
+This command is used to create or open a file or a directory.
+
+ Client Request                     Description
+ =================================  ==================================
+
+ UCHAR WordCount;                   Count of parameter words = 24
+ UCHAR AndXCommand;                 Secondary command;  0xFF = None
+ UCHAR AndXReserved;                Reserved (must be 0)
+ USHORT AndXOffset;                 Offset to next command WordCount
+ UCHAR Reserved;                    Reserved (must be 0)
+ USHORT NameLength;                 Length of Name[] in bytes
+ ULONG Flags;                       Create bit set:
+                                    0x02 - Request an oplock
+                                    0x04 - Request a batch oplock
+                                    0x08 - Target of open must be
+                                    directory
+ ULONG RootDirectoryFid;            If non-zero, open is relative to
+                                    this directory
+ ACCESS_MASK DesiredAccess;         access desired
+ LARGE_INTEGER AllocationSize;      Initial allocation size
+ ULONG ExtFileAttributes;           File attributes
+ ULONG ShareAccess;                 Type of share access
+ ULONG CreateDisposition;           Action to take if file exists or
+                                    not
+ ULONG CreateOptions;               Options to use if creating a file
+ ULONG ImpersonationLevel;          Security QOS information
+ UCHAR SecurityFlags;               Security tracking mode flags:
+                                    0x1 - SECURITY_CONTEXT_TRACKING
+                                    0x2 - SECURITY_EFFECTIVE_ONLY
+ USHORT ByteCount;                  Length of byte parameters
+ STRING Name[];                     File to open or create
+
+
+
+The DesiredAccess parameter is specified in section 3.8 on   Access Mask
+Encoding.
+
+If no value is specified, it still allows an application to query
+attributes without actually accessing the file.
+
+The ExtFIleAttributes parameter specifies the file attributes and flags
+for the file. The parameter's value is the sum of allowed attributes and
+flags defined in section 3.12 on    Extended File Attribute Encoding
+
+The ShareAccess field Specifies how this file can be shared. This
+parameter must be some combination of the following values:
+
+Name              Value      Meaning
+                  0          Prevents the file from being shared.
+FILE_SHARE_READ   0x00000001 Other open operations can be performed on
+                              the file for read access.
+FILE_SHARE_WRITE  0x00000002 Other open operations can be performed on
+                              the file for write access.
+FILE_SHARE_DELETE 0x00000004 Other open operations can be performed on
+                              the file for delete access.
+
+
+The CreateDisposition parameter can contain one of the following values:
+
+
+CREATE_NEW        Creates a new file. The function fails if the
+                  specified file already exists.
+CREATE_ALWAYS     Creates a new file. The function overwrites the file
+                  if it exists.
+OPEN_EXISTING     Opens the file. The function fails if the file does
+                  not exist.
+OPEN_ALWAYS       Opens the file, if it exists. If the file does not
+                  exist, act like CREATE_NEW.
+TRUNCATE_EXISTING Opens the file. Once opened, the file is truncated so
+                  that its size is zero bytes. The calling process must
+                  open the file with at least GENERIC_WRITE access. The
+                  function fails if the file does not exist.
+
+
+The ImpersonationLevel parameter can contain one or more of the
+following values:
+
+
+SECURITY_ANONYMOUS        Specifies to impersonate the client at the
+                          Anonymous impersonation level.
+SECURITY_IDENTIFICATION   Specifies to impersonate the client at the
+                          Identification impersonation level.
+SECURITY_IMPERSONATION    Specifies to impersonate the client at the
+                          Impersonation impersonation level.
+SECURITY_DELEGATION       Specifies to impersonate the client at the
+                          Delegation impersonation level.
+
+
+The SecurityFlags parameter can have either of the following two flags
+set:
+
+SECURITY_CONTEXT_TRACKING  Specifies that the security tracking mode is
+                           dynamic. If this flag is not specified,
+                           Security Tracking Mode is static.
+SECURITY_EFFECTIVE_ONLY    Specifies that only the enabled aspects of
+                           the client's security context are available
+                           to the server. If you do not specify this
+                           flag, all aspects of the client's security
+                           context are available. This flag allows the
+                           client to limit the groups and privileges
+                           that a server can use while impersonating the
+                           client.
+
+
+The response is as follows:
+
+
+ Server Response                    Description
+ =================================  ==================================
+
+ UCHAR WordCount;                   Count of parameter words = 26
+ UCHAR AndXCommand;                 0xFF = None
+ UCHAR AndXReserved;                MBZ
+ USHORT AndXOffset;                 Offset to next command WordCount
+ UCHAR OplockLevel;                 The oplock level granted
+                                    0 - No oplock granted
+                                    1 - Exclusive oplock granted
+                                    2 - Batch oplock granted
+                                    3 - Level II oplock granted
+ USHORT Fid;                        The file ID
+ ULONG CreateAction;                The action taken
+ TIME CreationTime;                 The time the file was created
+ TIME LastAccessTime;               The time the file was accessed
+ TIME LastWriteTime;                The time the file was last written
+ TIME ChangeTime;                   The time the file was last changed
+ ULONG ExtFileAttributes;           The file attributes
+ LARGE_INTEGER AllocationSize;      The number of byes allocated
+ LARGE_INTEGER EndOfFile;           The end of file offset
+ USHORT FileType;
+ USHORT DeviceState;                state of IPC device (e.g. pipe)
+ BOOLEAN Directory;                 TRUE if this is a directory
+ USHORT ByteCount;                  = 0
+
+
+The following SMBs may follow SMB_COM_NT_CREATE_ANDX:
+
+
+   SMB_COM_READ    SMB_COM_READ_ANDX
+   SMB_COM_IOCTL
+

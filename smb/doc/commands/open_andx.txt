@@ -1,0 +1,100 @@
+(from draft-leach_cifs-v1-spec-02.html)
+
+5.8 OPEN_ANDX:  Open File
+
+
+ Client Request                     Description
+ ================================== =================================
+
+ UCHAR WordCount;                   Count of parameter words = 15
+ UCHAR AndXCommand;                 Secondary (X) command;  0xFF =
+                                     none
+ UCHAR AndXReserved;                Reserved (must be 0)
+ USHORT AndXOffset;                 Offset to next command WordCount
+ USHORT Flags;                      Additional information: bit set-
+                                     0 - return additional info
+                                     1 - exclusive oplock requested
+                                     2 - batch oplock requested
+ USHORT DesiredAccess;              File open mode
+ USHORT SearchAttributes;
+ USHORT FileAttributes;
+ UTIME CreationTime;                Creation timestamp for file if it
+                                     gets created
+ USHORT OpenFunction;               Action to take if file exists
+ ULONG AllocationSize;              Bytes to reserve on create or
+                                     truncate
+ ULONG Reserved[2];                 Must be 0
+ USHORT ByteCount;                  Count of data bytes;    min = 1
+ UCHAR BufferFormat                 0x04
+ STRING FileName;
+
+
+
+ Server Response                    Description
+ ================================== =================================
+
+ UCHAR WordCount;                   Count of parameter words = 15
+ UCHAR AndXCommand;                 Secondary (X) command;  0xFF =
+                                     none
+ UCHAR AndXReserved;                Reserved (must be 0)
+ USHORT AndXOffset;                 Offset to next command WordCount
+ USHORT Fid;                        File handle
+ USHORT FileAttributes;
+ UTIME LastWriteTime;
+ ULONG DataSize;                    Current file size
+ USHORT GrantedAccess;              Access permissions actually
+                                     allowed
+ USHORT FileType;                   Type of file opened
+ USHORT DeviceState;                State of the named pipe
+ USHORT Action;                     Action taken
+ ULONG ServerFid;                   Server unique file id
+ USHORT Reserved;                   Reserved (must be 0)
+ USHORT ByteCount;                  Count of data bytes = 0
+
+
+
+DesiredAccess describes the access the client desires for the file (see
+section 3.6 -  Access Mode Encoding).
+
+OpenFunction specifies the action to be taken depending on whether or
+not the file exists (see section 3.8 -  Open Function Encoding).  Action
+in the response specifies the action as a result of the Open request
+(see section 3.9 -  Open Action Encoding).
+
+SearchAttributes indicates the attributes that the file must have to be
+found while searching to see if it exists.  The encoding of this field
+is described in the "File Attribute Encoding" section elsewhere in this
+document.  If SearchAttributes is zero then only normal files are
+returned.  If the system file, hidden or directory attributes are
+specified then the search is inclusive -- both the specified type(s) of
+files and normal files are returned.
+
+FileType returns the kind of resource actually opened:
+
+
+ Name                       Value  Description
+ ========================== ====== ==================================
+
+ FileTypeDisk               0      Disk file or directory as defined
+                                    in the attribute field
+ FileTypeByteModePipe       1      Named pipe in byte mode
+ FileTypeMessageModePipe    2      Named pipe in message mode
+ FileTypePrinter            3      Spooled printer
+ FileTypeUnknown            0xFFFF Unrecognized resource type
+
+
+
+If bit0 of Flags is clear, the FileAttributes, LastWriteTime, DataSize,
+FileType, and DeviceState have indeterminate values in the response.
+
+This SMB can request an oplock on the opened file.  Oplocks are fully
+described in the "Oplocks" section elsewhere in this document, and there
+is also discussion of oplocks in the SMB_COM_LOCKING_ANDX SMB
+description.  Bit1 and bit2 of the Flags field are used to request
+oplocks during open.
+
+The following SMBs may follow SMB_COM_OPEN_ANDX:
+
+
+   SMB_COM_READ    SMB_COM_READ_ANDX
+   SMB_COM_IOCTL

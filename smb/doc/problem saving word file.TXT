@@ -1,0 +1,61 @@
+
+Office97 file/save problem
+Ryan Koski Ryan at US.Distribution.com
+Tue Aug 25 14:45:51 GMT 1998
+
+    * Previous message: pidfile_create error in nmbd
+    * Next message: DG/UX 5.4R3.10
+    * Messages sorted by: [ date ] [ thread ] [ subject ] [ author ]
+
+You folks do awesome work! :-)  Thanks a lot for the fix.
+
+"I have a dream...  I have a dream where one day, even the largest of
+software companies will be able to provide same-day turnaround on bug
+fixes.  I have a dream where someday, all applications will be judged
+not on the persuasiveness of a marketing machine, but on the content of
+their code..." ;-)
+
+Ryan Koski
+Management Information Systems
+Distribution Architects International
+
+
+		-----Original Message-----
+		From:	Jeremy Allison
+[mailto:jallison at cthulhu.engr.sgi.com]
+		Sent:	Monday, August 24, 1998 7:56 PM
+		To:	Multiple recipients of list
+		Subject:	Re: Office97 file/save problem
+
+		Ryan,
+
+			Do a CVS update and re-make. It should work
+		now (it does here and I was able to reproduce your
+		bug). The problem was once you start telling NT you
+		do NT SMB calls it expects to be able to send a
+		trans2::SMB_SET_FILE_ALLOCATION_INFO (and also a set
+		delete attribute) successfully - we were returning
+		"not implemented".
+
+		Thanks for the logfile - I couldn't have fixed it
+		without it.
+
+		I will do the delete attribute code soon (not a problem
+		for MS Office though).
+
+		Cheers,
+
+			Jeremy Allison,
+			Samba Team.
+
+		--
+		--------------------------------------------------------
+		Buying an operating system without source is like buying
+		a self-assembly Space Shuttle with no instructions.
+		--------------------------------------------------------
+
+    * Previous message: pidfile_create error in nmbd
+    * Next message: DG/UX 5.4R3.10
+    * Messages sorted by: [ date ] [ thread ] [ subject ] [ author ]
+
+More information about the samba-ntdom mailing list

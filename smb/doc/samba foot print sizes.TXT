@@ -1,0 +1,54 @@
+Memory requirement
+Each smbd process will need approximately 1 MB of memory. Using
+a very large smb.conf file can significantly increase memory
+utilization above this minimum. Therefore, it is good practice to
+minimize unnecessary lines in the smb.conf file. One way to achieve
+this is to use the SWAT utility for configuration. For 2048 clients, the
+system should have at least 2 GB of physical memory. This is over
+and above the requirements of other applications that will be
+running concurrently with CIFS.
+
+
+
+
+ 198310 nmblookup
+ 182157 smbclient
+  22370 smbmnt
+  36838 smbmount
+  12379 smbumount
+ 326827 nmbd
+2815766 smbd
+-----------------
+3,412,490
+
+I'm sticking samba into an embedded system, and disk space is at a
+premium.  I noticed that the many of the same object files that are
+being compiled into libsmbclient.so are also being compiled into
+many other targets.  As an experiment, I created the following patch,
+which dynamically links most targets to libsambaclient.so instead of
+statically linking the common objects.
+
+The result worked beautifully, so I'm including my patch here in case
+it might help someone with a similar goal.  To use it, apply the
+patch, then run autoconf.  You might need to upgrade your autoconf,
+since samba-3.0.0 requires a relatively recent one.
+
+I'm also invoking configure thusly:
+
+CFLAGS="-Os" ./configure --disable-cups --with-libsmbclient --with-privatedir=/tmp --with-lockdir=/var/locks --with-piddir=/var/locks --with-configdir=/etc --with-logfilebase=/var/log --without-ldap --without-utmp --without-python --with-smbmount --with-libiconv=/home/dave/C/perforce/source/deschutes/rootfs/ati-nfsroot --disable-debug --disable-developer --disable-krb5developer
+
+Here are the programs I use with their new, smaller sizes:
+
+ 198310 nmblookup
+ 182157 smbclient
+  22370 smbmnt
+  36838 smbmount
+  12379 smbumount
+ 326827 nmbd
+2815766 smbd
+
+This is still about 1.5MB larger than my samba-2.2.8a installation.
+I'm looking for any suggestions on how I might make my samba footprint
+even smaller.
+
+Dave
