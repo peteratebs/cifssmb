@@ -32,6 +32,13 @@ Instructions:<br>
  Running the server :<br>
 <br>
  Build:<br>
+  The makefile forces it to build a 32 bit application.
+   This should be fixed, but for now it must be built as a 32 bit application.
+
+   These packages must be installed:
+     sudo apt-get install libc6-dev-i386
+     sudo apt-get install g++-multilib
+
   cd /cifssmb/smb/project/linuxserver<br>
   make clean<br>
   make<br>

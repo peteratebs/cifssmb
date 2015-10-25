@@ -1,7 +1,7 @@
 #include $(targ).inc
 
 ### COMPILER AND LINKER FLAGS ########################################
-ldflags += -lm -lc -lgcc -pthread -Wl,-Map=output.map
+ldflags += -m32 -L/usr/lib32 -lm -lc -lgcc -pthread -Wl,-Map=output.map
 
 DEBUG=1
 
@@ -19,7 +19,7 @@ else
 endif
 
 # cflags  += -Wconversion -Wextra -Werror
-cflags  += -Wconversion -Wextra
+cflags  += -m32 -Wconversion -Wextra
 #   cflags  += -Wall -Werror -Wextra
 
 ######################################################################
